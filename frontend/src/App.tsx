@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { RecoilRoot } from "recoil";
+import { EmployeeChart } from "./features/EmployeeChart";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RecoilRoot>
+      <div className="flex justify-center align-middle">
+        <div className="container flex flex-col justify-center">
+          <h1 className="mx-auto text-xl">Employee Data</h1>
+          <main>
+            <EmployeeChart />
+          </main>
+        </div>
+      </div>
+    </RecoilRoot>
   );
 }
 

@@ -8,6 +8,7 @@
       ]
     }],
     "block-no-empty": null,
-    "unit-whitelist": ["em", "rem", "s"]
+    "unit-whitelist": ["em", "rem", "s", "px"],
+    "declaration-block-no-duplicate-properties": ["consecutive-duplicates-with-different-values"]
   }
 }
