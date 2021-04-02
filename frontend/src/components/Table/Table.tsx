@@ -25,10 +25,9 @@ export const Table = (props: Props) => {
             <tr key={`row-${i}`}>
               {columns.map((c, j) => {
                 const isBottomLeft = i === rows.length - 1 && j === 0;
-                const bottomLeftStyle =
-                  variant === "highlight-last" && isBottomLeft
-                    ? "font-bold"
-                    : "";
+                const isHighlight =
+                  variant === "highlight-last" && isBottomLeft;
+                const bottomLeftStyle = isHighlight ? "font-bold" : "";
                 return (
                   <td
                     key={`cell-${i}-${j}`}
