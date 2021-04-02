@@ -30,7 +30,7 @@ export const Table = (props: Props) => {
                 return (
                   <td
                     key={`cell-${i}-${j}`}
-                    className="px-2 py-6 text-sm text-center text-gray-500 border-b bg-gray-50 font-extra-light"
+                    className="px-2 py-4 text-sm text-center text-gray-500 border-b bg-gray-50 font-extra-light"
                   >
                     {r[c]}
                   </td>

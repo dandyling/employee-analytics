@@ -1,10 +1,11 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { useRecoilValue } from "recoil";
 import { Card } from "../components/Card/Card";
 import { CardBody } from "../components/Card/CardBody";
 import { CardHeader } from "../components/Card/CardHeader";
 import { Table } from "../components/Table/Table";
 import { aggregateState } from "../data/Employee";
+import { DeltaChip } from "./DeltaChip";
 
 interface EmployeeAverage {
   location: string;
@@ -13,9 +14,9 @@ interface EmployeeAverage {
 }
 
 interface EmployeeRow {
-  Location: string;
-  Salary: string;
-  Delta: string;
+  Location: ReactNode;
+  Salary: ReactNode;
+  Delta: ReactNode;
 }
 
 export const EmployeeTable = () => {
@@ -45,10 +46,8 @@ export const EmployeeTable = () => {
   const tableRows: EmployeeRow[] = allRows.map((r) => {
     return {
       Location: r.location,
-      Salary: `$${r.current.toLocaleString("en-US", {
-        maximumFractionDigits: 0,
-      })}`,
-      Delta: `${getDelta(r.previous, r.current).toFixed(0)}%`,
+      Salary: getSalaryStr(r.current),
+      Delta: <DeltaChip previous={r.previous} current={r.current} />,
     };
   });
 
@@ -66,6 +65,8 @@ export const EmployeeTable = () => {
   );
 };
 
-const getDelta = (current: number, previous: number) => {
-  return ((current - previous) / previous) * 100;
+const getSalaryStr = (salary: number) => {
+  return `$${salary.toLocaleString("en-US", {
+    maximumFractionDigits: 0,
+  })}`;
 };
