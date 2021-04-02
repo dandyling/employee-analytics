@@ -17,5 +17,7 @@ module.exports = {
       fontWeight: ["last"]
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms')
+  ],
 }

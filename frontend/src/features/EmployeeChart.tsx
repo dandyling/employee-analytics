@@ -1,14 +1,15 @@
 import React, { useMemo } from "react";
 import ChartistGraph from "react-chartist";
 import { useRecoilValue } from "recoil";
-import { aggregateState } from "../data/Employee";
+import { aggregateFilteredState } from "../data/Employee";
+import { Filter } from "./Filter";
 
 const delays2 = 80;
 const durations2 = 500;
 const chartHeight = 400;
 
 export const EmployeeChart = () => {
-  const aggregates = useRecoilValue(aggregateState);
+  const aggregates = useRecoilValue(aggregateFilteredState);
   const previousData = useMemo(
     () => Object.values(aggregates).map((v) => v.previous / v.count),
     [aggregates]
@@ -69,14 +70,17 @@ export const EmployeeChart = () => {
   };
 
   return (
-    <div className="px-5 py-4 shadow-md lg:rounded-md bg-brand">
-      <ChartistGraph
-        data={employeeChart.data}
-        type="Bar"
-        options={employeeChart.options}
-        responsiveOptions={employeeChart.responsiveOptions}
-        listener={employeeChart.animation}
-      />
+    <div className="flex flex-col">
+      <Filter />
+      <div className="px-5 py-4 shadow-md lg:rounded-md bg-brand">
+        <ChartistGraph
+          data={employeeChart.data}
+          type="Bar"
+          options={employeeChart.options}
+          responsiveOptions={employeeChart.responsiveOptions}
+          listener={employeeChart.animation}
+        />
+      </div>
     </div>
   );
 };

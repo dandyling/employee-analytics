@@ -1,8 +1,9 @@
 import React, { ReactNode } from "react";
 import { useRecoilValue } from "recoil";
 import { Table } from "../components/Table/Table";
-import { aggregateState } from "../data/Employee";
+import { aggregateFilteredState } from "../data/Employee";
 import { DeltaChip } from "./DeltaChip";
+import { Filter } from "./Filter";
 
 interface EmployeeAverage {
   location: string;
@@ -17,7 +18,7 @@ interface EmployeeRow {
 }
 
 export const EmployeeTable = () => {
-  const aggregates = useRecoilValue(aggregateState);
+  const aggregates = useRecoilValue(aggregateFilteredState);
   const locationRows: EmployeeAverage[] = Object.keys(aggregates).map((l) => {
     const aggregate = aggregates[l];
     const currentAverage = aggregate.current / aggregate.count;
@@ -49,11 +50,14 @@ export const EmployeeTable = () => {
   });
 
   return (
-    <Table
-      columns={["Location", "Salary", "Delta"]}
-      rows={tableRows}
-      variant="highlight-last"
-    />
+    <div className="flex flex-col">
+      <Filter />
+      <Table
+        columns={["Location", "Salary", "Delta"]}
+        rows={tableRows}
+        variant="highlight-last"
+      />
+    </div>
   );
 };
 
