@@ -1,15 +1,14 @@
 import React from "react";
 import { RecoilRoot } from "recoil";
-import { EmployeeChart } from "./features/EmployeeChart";
+import { EmployeeTable } from "./features/EmployeeTable";
 
 function App() {
   return (
     <RecoilRoot>
       <div className="flex justify-center align-middle">
-        <div className="container flex flex-col justify-center">
-          <h1 className="mx-auto text-xl">Employee Data</h1>
+        <div className="container flex flex-col justify-center pt-8">
           <main>
-            <EmployeeChart />
+            <EmployeeTable />
           </main>
         </div>
       </div>

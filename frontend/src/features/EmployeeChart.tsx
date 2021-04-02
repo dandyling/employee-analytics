@@ -1,9 +1,9 @@
 import React, { useMemo } from "react";
 import ChartistGraph from "react-chartist";
 import { useRecoilValue } from "recoil";
-import { Card } from "../components/Card";
-import { CardBody } from "../components/CardBody";
-import { CardHeader } from "../components/CardHeader";
+import { Card } from "../components/Card/Card";
+import { CardBody } from "../components/Card/CardBody";
+import { CardHeader } from "../components/Card/CardHeader";
 import { aggregateState } from "../data/Employee";
 
 const delays2 = 80;
@@ -73,7 +73,7 @@ export const EmployeeChart = () => {
 
   return (
     <Card>
-      <CardHeader>Employee Data by Location</CardHeader>
+      <CardHeader>Employee Data</CardHeader>
       <CardBody>
         <div className="px-5 py-4 rounded-md shadow-md bg-brand">
           <ChartistGraph
