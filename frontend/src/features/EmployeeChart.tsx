@@ -69,7 +69,7 @@ export const EmployeeChart = () => {
   };
 
   return (
-    <div className="px-5 py-4 rounded-md shadow-md bg-brand">
+    <div className="px-5 py-4 shadow-md lg:rounded-md bg-brand">
       <ChartistGraph
         data={employeeChart.data}
         type="Bar"

@@ -6,5 +6,5 @@ interface Props {
 
 export const CardBody = (props: Props) => {
   const { children } = props;
-  return <div className="p-4">{children}</div>;
+  return <div className="lg:p-4">{children}</div>;
 };

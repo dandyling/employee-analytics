@@ -9,7 +9,7 @@ function App() {
   return (
     <RecoilRoot>
       <div className="flex items-center justify-center">
-        <div className="container flex flex-col justify-center pt-8">
+        <div className="flex flex-col justify-center w-full lg:container lg:pt-8">
           <main>
             <TabsCard
               title="Employee Data"
