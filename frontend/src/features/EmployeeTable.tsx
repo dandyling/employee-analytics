@@ -1,8 +1,5 @@
 import React, { ReactNode } from "react";
 import { useRecoilValue } from "recoil";
-import { Card } from "../components/Card/Card";
-import { CardBody } from "../components/Card/CardBody";
-import { CardHeader } from "../components/Card/CardHeader";
 import { Table } from "../components/Table/Table";
 import { aggregateState } from "../data/Employee";
 import { DeltaChip } from "./DeltaChip";
@@ -52,16 +49,11 @@ export const EmployeeTable = () => {
   });
 
   return (
-    <Card>
-      <CardHeader>Employee Data</CardHeader>
-      <CardBody>
-        <Table
-          columns={["Location", "Salary", "Delta"]}
-          rows={tableRows}
-          variant="highlight-last"
-        />
-      </CardBody>
-    </Card>
+    <Table
+      columns={["Location", "Salary", "Delta"]}
+      rows={tableRows}
+      variant="highlight-last"
+    />
   );
 };
 

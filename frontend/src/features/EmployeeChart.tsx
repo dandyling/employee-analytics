@@ -1,9 +1,6 @@
 import React, { useMemo } from "react";
 import ChartistGraph from "react-chartist";
 import { useRecoilValue } from "recoil";
-import { Card } from "../components/Card/Card";
-import { CardBody } from "../components/Card/CardBody";
-import { CardHeader } from "../components/Card/CardHeader";
 import { aggregateState } from "../data/Employee";
 
 const delays2 = 80;
@@ -72,19 +69,14 @@ export const EmployeeChart = () => {
   };
 
   return (
-    <Card>
-      <CardHeader>Employee Data</CardHeader>
-      <CardBody>
-        <div className="px-5 py-4 rounded-md shadow-md bg-brand">
-          <ChartistGraph
-            data={employeeChart.data}
-            type="Bar"
-            options={employeeChart.options}
-            responsiveOptions={employeeChart.responsiveOptions}
-            listener={employeeChart.animation}
-          />
-        </div>
-      </CardBody>
-    </Card>
+    <div className="px-5 py-4 rounded-md shadow-md bg-brand">
+      <ChartistGraph
+        data={employeeChart.data}
+        type="Bar"
+        options={employeeChart.options}
+        responsiveOptions={employeeChart.responsiveOptions}
+        listener={employeeChart.animation}
+      />
+    </div>
   );
 };

@@ -13,7 +13,7 @@ export const DeltaChip = (props: Props) => {
   const variant = getDeltaVariant(difference);
 
   return (
-    <div className="flex justify-center w-full align-middle">
+    <div className="flex justify-center w-full items-center">
       <Badge variant={variant}>{`${difference}%`}</Badge>
     </div>
   );
