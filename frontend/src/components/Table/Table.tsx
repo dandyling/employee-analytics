@@ -22,15 +22,17 @@ export const Table = (props: Props) => {
       <tbody>
         {rows.map((r, i) => {
           return (
-            <tr
-              key={`row-${i}`}
-              className={variant === "highlight-last" ? "last:font-bold" : ""}
-            >
+            <tr key={`row-${i}`}>
               {columns.map((c, j) => {
+                const isBottomLeft = i === rows.length - 1 && j === 0;
+                const bottomLeftStyle =
+                  variant === "highlight-last" && isBottomLeft
+                    ? "font-bold"
+                    : "";
                 return (
                   <td
                     key={`cell-${i}-${j}`}
-                    className="px-2 py-4 text-sm text-center text-gray-500 border-b bg-gray-50 font-extra-light"
+                    className={`px-2 py-4 text-sm text-center text-gray-500 border-b bg-gray-50 font-extralight ${bottomLeftStyle}`}
                   >
                     {r[c]}
                   </td>
