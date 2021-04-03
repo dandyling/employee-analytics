@@ -1,7 +1,7 @@
 import { faChartBar, faUser } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import { TabsCard } from "../components/Tabs/TabsCard";
-import { useInitialFilterState } from "../data/InitialFilterState";
+import { useInitialFilterState } from "../data/filter/InitialFilterState";
 import { SalaryChart } from "./SalaryChart";
 import { SalaryTable } from "./SalaryTable";
 

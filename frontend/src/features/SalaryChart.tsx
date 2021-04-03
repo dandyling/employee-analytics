@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import ChartistGraph from "react-chartist";
 import { useRecoilValue } from "recoil";
-import { salariesFilteredState } from "../data/SalariesState";
+import { salariesFilteredState } from "../data/salaries/SalariesState";
 import { Filter } from "./Filter";
 
 const delays2 = 80;

@@ -1,5 +1,5 @@
 import { atom, selector } from "recoil";
-import { salariesState } from "./SalariesState";
+import { salariesState } from "../salaries/SalariesState";
 
 export const filterState = atom<Record<string, boolean>>({
     key: "filterState",

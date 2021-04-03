@@ -1,0 +1,23 @@
+[{
+    "firstName": "Nancee",
+    "lastName": "Ramsdell",
+    "location": "China",
+    "prevSalary": "$11010.09",
+    "currSalary": "$6366.62",
+    "org": "IT Support"
+},
+{
+    "firstName": "Karola",
+    "lastName": "Rigardeau",
+    "location": "China",
+    "prevSalary": "$10015.23",
+    "currSalary": "$6632.52",
+    "org": "Technology"
+}, {
+    "firstName": "Karola",
+    "lastName": "Rigardeau",
+    "location": "Japan",
+    "prevSalary": "$10015.23",
+    "currSalary": "$6632.52",
+    "org": "Technology"
+}]

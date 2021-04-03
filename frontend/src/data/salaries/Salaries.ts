@@ -1,4 +1,4 @@
-import { SalaryData, LocationSalaries } from "./Employee";
+import { LocationSalaries, SalaryData } from "./SalaryData";
 
 export const calcSalariesByLocation = (
     data: SalaryData[]

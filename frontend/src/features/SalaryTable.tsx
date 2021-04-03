@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react";
 import { useRecoilValue } from "recoil";
 import { Table } from "../components/Table/Table";
-import { LocationSalaries } from "../data/Employee";
-import { salariesFilteredState } from "../data/SalariesState";
+import { LocationSalaries } from "../data/salaries/SalaryData";
+import { salariesFilteredState } from "../data/salaries/SalariesState";
 import { DeltaChip } from "./DeltaChip";
 import { Filter } from "./Filter";
 

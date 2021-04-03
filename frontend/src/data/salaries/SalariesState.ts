@@ -1,12 +1,12 @@
 import { atom, selector } from "recoil";
-import { LocationSalaries, SalaryData } from "./Employee";
-import * as data from "./EmployeeDataset.json";
-import { filterState } from "./FilterState";
+import { LocationSalaries, SalaryData } from "./SalaryData";
+import data from "./../../stubs/EmployeeDataset.json";
 import { calcSalariesByLocation } from "./Salaries";
+import { filterState } from "./../filter/FilterState";
 
 export const salaryDataState = atom<SalaryData[]>({
   key: "salaryDataState",
-  default: (data as any).default,
+  default: data,
 });
 
 export const salariesState = selector({
