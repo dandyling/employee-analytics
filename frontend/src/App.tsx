@@ -1,17 +1,14 @@
 import React from "react";
 import { RecoilRoot } from "recoil";
+import { Layout } from "./components/Layout/Layout";
 import { EmployeeData } from "./features/EmployeeData";
 
 function App() {
   return (
     <RecoilRoot>
-      <div className="flex items-center justify-center">
-        <div className="flex flex-col justify-center w-full lg:container lg:pt-8">
-          <main>
-            <EmployeeData />
-          </main>
-        </div>
-      </div>
+      <Layout>
+        <EmployeeData />
+      </Layout>
     </RecoilRoot>
   );
 }
