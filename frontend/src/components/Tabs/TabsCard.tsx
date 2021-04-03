@@ -1,7 +1,7 @@
 import React, { ReactNode, useState } from "react";
-import { Card } from "../Card/Card";
-import { CardBody } from "../Card/CardBody";
-import { CardHeader } from "../Card/CardHeader";
+import { Card } from "../card/Card";
+import { CardBody } from "../card/CardBody";
+import { CardHeader } from "../card/CardHeader";
 import { TabBar, TabHeader } from "./TabBar";
 
 export interface Tab extends TabHeader {

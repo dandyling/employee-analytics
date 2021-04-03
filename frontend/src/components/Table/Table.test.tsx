@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import React from "react";
-import { Table } from "../Table/Table";
+import { Table } from "./Table";
 
 const testColumns = ["Column 1", "Column 2", "Column 3"];
 const testRows = [

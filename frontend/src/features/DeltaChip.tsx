@@ -1,5 +1,5 @@
 import React from "react";
-import { Badge, ColorType } from "../components/Badge/Badge";
+import { Badge, ColorType } from "../components/badge/Badge";
 
 interface Props {
   previous: number;
@@ -13,7 +13,7 @@ export const DeltaChip = (props: Props) => {
   const variant = getDeltaVariant(difference);
 
   return (
-    <div className="flex justify-center w-full items-center">
+    <div className="flex items-center justify-center w-full">
       <Badge variant={variant}>{`${difference}%`}</Badge>
     </div>
   );
