@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import ChartistGraph from "react-chartist";
 import { useRecoilValue } from "recoil";
-import { aggregateFilteredState } from "../data/Employee";
+import { locationSalariesFilteredState } from "../data/Employee";
 import { Filter } from "./Filter";
 
 const delays2 = 80;
@@ -9,7 +9,7 @@ const durations2 = 500;
 const chartHeight = 400;
 
 export const EmployeeChart = () => {
-  const aggregates = useRecoilValue(aggregateFilteredState);
+  const aggregates = useRecoilValue(locationSalariesFilteredState);
   const previousData = useMemo(
     () => Object.values(aggregates).map((v) => v.previous / v.count),
     [aggregates]
@@ -32,10 +32,7 @@ export const EmployeeChart = () => {
       low: 0,
       high: 10000,
       chartPadding: {
-        top: 0,
         right: 5,
-        bottom: 0,
-        left: 0,
       },
       height: chartHeight,
     },
@@ -70,7 +67,7 @@ export const EmployeeChart = () => {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex-col">
       <Filter />
       <div className="px-5 py-4 shadow-md lg:rounded-md bg-brand">
         <ChartistGraph
