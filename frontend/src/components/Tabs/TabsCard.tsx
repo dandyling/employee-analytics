@@ -24,7 +24,7 @@ export const TabsCard = (props: TabsCardProps) => {
   return (
     <Card>
       <CardHeader>
-        {title && <div className="mr-4">{title}</div>}
+        {title && <h3 className="mr-4">{title}</h3>}
         <TabBar tabs={tabs} selected={index} onChange={handleChange} />
       </CardHeader>
       <CardBody>{tabContent}</CardBody>
