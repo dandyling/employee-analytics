@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<TabsCard
+  tabs={
+    Array [
+      Object {
+        "tabContent": <div>
+          Tab Content 1
+        </div>,
+        "tabName": "Tab 1",
+      },
+      Object {
+        "tabContent": <div>
+          Tab Content 2
+        </div>,
+        "tabName": "Tab 2",
+      },
+    ]
+  }
+/>
+`;

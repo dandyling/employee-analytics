@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Table
+  columns={
+    Array [
+      "Column 1",
+      "Column 2",
+      "Column 3",
+    ]
+  }
+  rows={
+    Array [
+      Object {
+        "Column 1": 100,
+        "Column 2": 101,
+        "Column 3": 102,
+      },
+      Object {
+        "Column 1": 200,
+        "Column 2": 201,
+        "Column 3": 202,
+      },
+    ]
+  }
+/>
+`;

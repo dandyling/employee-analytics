@@ -6,6 +6,11 @@ interface Props {
 
 export const Table = (props: Props) => {
   const { columns, rows, variant } = props;
+
+  if (columns.length === 0) {
+    return null;
+  }
+
   return (
     <table className="w-full">
       <thead className="text-xs text-center text-white bg-brand">

@@ -4,7 +4,7 @@ import { CardBody } from "../Card/CardBody";
 import { CardHeader } from "../Card/CardHeader";
 import { TabBar, TabHeader } from "./TabBar";
 
-interface Tab extends TabHeader {
+export interface Tab extends TabHeader {
   tabContent: ReactNode;
 }
 interface TabsCardProps {

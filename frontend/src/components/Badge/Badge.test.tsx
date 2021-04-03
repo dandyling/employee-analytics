@@ -1,39 +1,34 @@
 import { render, screen } from "@testing-library/react";
 import React from "react";
-import { CardBody } from "./CardBody";
+import { Badge } from "./Badge";
 
 test("renders string", () => {
-  render(<CardBody>String</CardBody>);
+  render(<Badge>String</Badge>);
   const childElement = screen.getByText(/String/i);
   expect(childElement).toBeInTheDocument();
 });
 
 test("renders number", () => {
-  render(<CardBody>1.23</CardBody>);
+  render(<Badge>1.23</Badge>);
   const childElement = screen.getByText(/1.23/i);
   expect(childElement).toBeInTheDocument();
 });
 
-test("renders empty child", () => {
-  const { container } = render(<CardBody></CardBody>);
-  expect(container.firstChild).toBeEmptyDOMElement();
-});
-
 test("renders empty child for null", () => {
-  const { container } = render(<CardBody>{null}</CardBody>);
+  const { container } = render(<Badge>{null}</Badge>);
   expect(container.firstChild).toBeEmptyDOMElement();
 });
 
 test("renders empty child for undefined", () => {
-  const { container } = render(<CardBody>{undefined}</CardBody>);
+  const { container } = render(<Badge>{undefined}</Badge>);
   expect(container.firstChild).toBeEmptyDOMElement();
 });
 
 test("renders react node", () => {
   render(
-    <CardBody>
+    <Badge>
       <div>node</div>
-    </CardBody>
+    </Badge>
   );
   const nodeElement = screen.getByText(/node/i);
   expect(nodeElement).toBeInTheDocument();
@@ -41,9 +36,9 @@ test("renders react node", () => {
 
 test("renders correctly", () => {
   const wrapper = (
-    <CardBody>
+    <Badge>
       <div>node</div>
-    </CardBody>
+    </Badge>
   );
   expect(wrapper).toMatchSnapshot();
 });

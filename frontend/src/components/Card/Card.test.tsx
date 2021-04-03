@@ -38,3 +38,12 @@ test("renders react node", () => {
   const nodeElement = screen.getByText(/node/i);
   expect(nodeElement).toBeInTheDocument();
 });
+
+test("renders correctly", () => {
+  const wrapper = (
+    <Card>
+      <div>node</div>
+    </Card>
+  );
+  expect(wrapper).toMatchSnapshot();
+});

@@ -43,3 +43,12 @@ test("renders card header background color", () => {
   const { container } = render(<CardHeader>Test</CardHeader>);
   expect(container.firstChild).toHaveClass("bg-brand");
 });
+
+test("renders correctly", () => {
+  const wrapper = (
+    <CardHeader>
+      <div>node</div>
+    </CardHeader>
+  );
+  expect(wrapper).toMatchSnapshot();
+});

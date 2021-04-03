@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<TabBar
+  onChange={[Function]}
+  selected={0}
+  tabs={
+    Array [
+      Object {
+        "tabName": "Tab 1",
+      },
+      Object {
+        "tabName": "Tab 2",
+      },
+    ]
+  }
+/>
+`;
