@@ -1,13 +1,13 @@
 import React from "react";
 import { RecoilRoot } from "recoil";
 import { Layout } from "./components/Layout/Layout";
-import { EmployeeData } from "./features/EmployeeData";
+import { EmployeeSalaryData } from "./features/EmployeeSalaryData";
 
 function App() {
   return (
     <RecoilRoot>
       <Layout>
-        <EmployeeData />
+        <EmployeeSalaryData />
       </Layout>
     </RecoilRoot>
   );
