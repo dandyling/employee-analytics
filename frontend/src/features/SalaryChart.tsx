@@ -4,9 +4,6 @@ import { useRecoilValue } from "recoil";
 import { salariesFilteredState } from "../data/salaries/SalariesState";
 import { Filter } from "./Filter";
 
-const delays2 = 80;
-const durations2 = 500;
-
 interface Props {
   className?: string;
 }
@@ -24,49 +21,9 @@ export const SalaryChart = (props: Props) => {
     [aggregates]
   );
 
-  const employeeChart = {
-    data: {
-      labels: Object.keys(aggregates),
-      series: [previousData, currentData],
-    },
-    options: {
-      axisX: {
-        showGrid: false,
-      },
-      low: 0,
-      high: 10000,
-      chartPadding: {
-        right: 5,
-      },
-    },
-    responsiveOptions: [
-      [
-        "screen and (max-width: 640px)",
-        {
-          seriesBarDistance: 5,
-          axisX: {
-            labelInterpolationFnc: function (value: any) {
-              return value[0];
-            },
-          },
-        },
-      ],
-    ],
-    animation: {
-      draw: function (data: any) {
-        if (data.type === "bar") {
-          data.element.animate({
-            opacity: {
-              begin: (data.index + 1) * delays2,
-              dur: durations2,
-              from: 0,
-              to: 1,
-              easing: "ease",
-            },
-          });
-        }
-      },
-    },
+  const data = {
+    labels: Object.keys(aggregates),
+    series: [previousData, currentData],
   };
 
   return (
@@ -74,13 +31,54 @@ export const SalaryChart = (props: Props) => {
       <Filter />
       <div className="flex flex-col flex-1 px-5 py-4 shadow-md lg:rounded-md bg-brand ct-chart">
         <ChartistGraph
-          data={employeeChart.data}
+          data={data}
           type="Bar"
-          options={employeeChart.options}
-          responsiveOptions={employeeChart.responsiveOptions}
-          listener={employeeChart.animation}
+          options={config.options}
+          responsiveOptions={config.responsiveOptions}
+          listener={config.animations}
         />
       </div>
     </div>
   );
+};
+
+const config = {
+  options: {
+    axisX: {
+      showGrid: false,
+    },
+    low: 0,
+    high: 10000,
+    chartPadding: {
+      right: 5,
+    },
+  },
+  responsiveOptions: [
+    [
+      "screen and (max-width: 640px)",
+      {
+        seriesBarDistance: 5,
+        axisX: {
+          labelInterpolationFnc: function (value: any) {
+            return value[0];
+          },
+        },
+      },
+    ],
+  ],
+  animations: {
+    draw: function (data: any) {
+      if (data.type === "bar") {
+        data.element.animate({
+          opacity: {
+            begin: (data.index + 1) * 80,
+            dur: 500,
+            from: 0,
+            to: 1,
+            easing: "ease",
+          },
+        });
+      }
+    },
+  },
 };
