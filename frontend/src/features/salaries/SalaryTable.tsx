@@ -26,13 +26,7 @@ export const SalaryTable = (props: Props) => {
   const { className = "" } = props;
   const salaries = useRecoilValue(salariesFilteredState);
 
-  const getRows = () => {
-    const locationRows = getAllLocationRows(salaries);
-    const rows: TableRow[] = mapTableRows(locationRows);
-    return rows;
-  };
-
-  const rows = useMemo(getRows, [salaries]);
+  const rows = useMemo(() => getTableRows(salaries), [salaries]);
 
   return (
     <div className={`flex flex-col ${className}`}>
@@ -95,6 +89,12 @@ export const mapTableRows = (rows: LocationRow[]) => {
     };
   });
   return tableRows;
+};
+
+export const getTableRows = (salaries: LocationSalaries) => {
+  const locationRows = getAllLocationRows(salaries);
+  const rows: TableRow[] = mapTableRows(locationRows);
+  return rows;
 };
 
 export const getSalaryStr = (salary: number) => {
