@@ -1,6 +1,6 @@
 import React, { ReactNode, useMemo } from "react";
 import { useRecoilValue } from "recoil";
-import { Table } from "../common/table/Table";
+import { Table } from "../components/table/Table";
 import { LocationSalaries } from "../data/salaries/SalaryData";
 import { salariesFilteredState } from "../data/salaries/SalariesState";
 import { DeltaChip } from "./DeltaChip";

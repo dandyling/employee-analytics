@@ -1,6 +1,6 @@
 import React from "react";
 import { useRecoilState } from "recoil";
-import { Checkbox } from "../common/checkbox/Checkbox";
+import { Checkbox } from "../components/checkbox/Checkbox";
 import { filterState } from "../data/filter/FilterState";
 
 export const Filter = () => {

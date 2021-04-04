@@ -1,5 +1,5 @@
 import React from "react";
-import { Badge, ColorType } from "../common/badge/Badge";
+import { Badge, ColorType } from "../components/badge/Badge";
 
 interface Props {
   previous: number;
