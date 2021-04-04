@@ -1,7 +1,7 @@
 import React from "react";
 import { RecoilRoot } from "recoil";
 import { Layout } from "./components/layout/Layout";
-import { EmployeeSalaryData } from "./features/EmployeeSalaryData";
+import { EmployeeSalaryData } from "./features/salaries/EmployeeSalaryData";
 
 function App() {
   return (

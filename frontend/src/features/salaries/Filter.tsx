@@ -1,7 +1,7 @@
 import React from "react";
 import { useRecoilState } from "recoil";
-import { Checkbox } from "../components/checkbox/Checkbox";
-import { filterState } from "../data/filter/FilterState";
+import { Checkbox } from "../../components/checkbox/Checkbox";
+import { filterState } from "../../data/filter/FilterState";
 
 export const Filter = () => {
   const [filter, setFilter] = useRecoilState(filterState);
