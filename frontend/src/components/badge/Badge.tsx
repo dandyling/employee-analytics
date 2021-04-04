@@ -20,7 +20,7 @@ export const Badge = (props: Props) => {
   );
 };
 
-const getVariantColor = (variant: ColorType) => {
+export const getVariantColor = (variant: ColorType) => {
   switch (variant) {
     case "success":
       return "bg-success";

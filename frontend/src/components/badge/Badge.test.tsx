@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import React from "react";
-import { Badge } from "./Badge";
+import { Badge, getVariantColor } from "./Badge";
 
 test("renders string", () => {
   render(<Badge>String</Badge>);
@@ -41,4 +41,16 @@ test("renders correctly", () => {
     </Badge>
   );
   expect(wrapper).toMatchSnapshot();
+});
+
+test("returns bg-success variant class correctly", () => {
+  expect(getVariantColor("success")).toEqual("bg-success");
+});
+
+test("returns bg-warning variant class correctly", () => {
+  expect(getVariantColor("warning")).toEqual("bg-warning");
+});
+
+test("returns bg-normal variant class correctly", () => {
+  expect(getVariantColor("normal")).toEqual("bg-normal");
 });
