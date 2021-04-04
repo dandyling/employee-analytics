@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useMemo } from "react";
 import { useRecoilValue } from "recoil";
 import { Table } from "../components/table/Table";
 import { LocationSalaries } from "../data/salaries/SalaryData";
@@ -26,29 +26,39 @@ export const SalaryTable = (props: Props) => {
   const { className = "" } = props;
   const salaries = useRecoilValue(salariesFilteredState);
 
-  const getLocationRows = () => {
+  const getLocationRows = (salaries: LocationSalaries) => {
     const locationRows: LocationRow[] = mapLocationRows(salaries);
     const total: LocationRow = calcTotalSalaries(locationRows);
     const allRows = [...locationRows, total];
     return allRows;
   };
 
-  const rows = getLocationRows();
-  const tableRows: TableRow[] = rows.map((r) => {
-    const { location, current, previous } = r;
-    return {
-      Location: location,
-      Salary: getSalaryStr(current),
-      Delta: <DeltaChip previous={previous} current={current} />,
-    };
-  });
+  const mapTableRows = (rows: LocationRow[]) => {
+    const tableRows = rows.map((r) => {
+      const { location, current, previous } = r;
+      return {
+        Location: location,
+        Salary: getSalaryStr(current),
+        Delta: <DeltaChip previous={previous} current={current} />,
+      };
+    });
+    return tableRows;
+  };
+
+  const getRows = () => {
+    const locationRows = getLocationRows(salaries);
+    const rows: TableRow[] = mapTableRows(locationRows);
+    return rows;
+  };
+
+  const rows = useMemo(getRows, [salaries]);
 
   return (
     <div className={`flex flex-col ${className}`}>
       <Filter />
       <Table
         columns={["Location", "Salary", "Delta"]}
-        rows={tableRows}
+        rows={rows}
         variant="highlight-last"
         className="flex-1 bg-gray-50"
       />
