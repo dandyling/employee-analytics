@@ -16,7 +16,7 @@ The code is written to be as modular as possible to encourage code reuse. Thus, 
 
    These are business logic calculations, such as the salary calculations etc
 
-The presentational layer is built using tailwindcss, as it is a CSS only framework, and doesn't add javascript overhead for some CSS-in-JS framework such as ChakraUI. The website is also fully responsive using CSS only. Do checkout the demo below
+The presentational layer is built using tailwindcss, as it is a CSS only framework, and doesn't add javascript overhead for some CSS-in-JS framework such as ChakraUI. The website is also fully responsive using CSS only. Do checkout the mobile view using the demo below
 
 [LIVE DEMO](https://employee-analytics.netlify.app/)
 
