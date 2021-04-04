@@ -34,7 +34,6 @@ export const SalaryChart = () => {
       chartPadding: {
         right: 5,
       },
-      height: chartHeight,
     },
     responsiveOptions: [
       [
@@ -67,9 +66,9 @@ export const SalaryChart = () => {
   };
 
   return (
-    <div className="flex-col">
+    <div className="flex flex-col h-full">
       <Filter />
-      <div className="px-5 py-4 shadow-md lg:rounded-md bg-brand">
+      <div className="flex flex-col flex-1 px-5 py-4 shadow-md lg:rounded-md bg-brand ct-chart">
         <ChartistGraph
           data={employeeChart.data}
           type="Bar"

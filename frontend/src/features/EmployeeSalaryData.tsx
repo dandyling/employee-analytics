@@ -23,6 +23,7 @@ export const EmployeeSalaryData = () => {
           tabContent: <SalaryTable />,
         },
       ]}
+      className="h-full"
     />
   );
 };
