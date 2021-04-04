@@ -1,36 +1,82 @@
-# Panalyt Take-Home Coding Exercises
+# Employee Salary Analytics
 
-## What to expect?
-We understand that your time is valuable, and in anyone's busy schedule solving these exercises may constitute a fairly substantial chunk of time, so we really appreciate any effort you put in to helping us build a solid team.
+This is a web-app that calculates the average salary of employees by location. The sample data in the application can be found from `EmployeeData.md`.
 
-## What we are looking for?
-**Keep it simple**. Read the requirements and restrictions carefully and focus on solving the problem.
+## Demo
 
-**Treat it like production code**. That is, develop your software in the same way that you would for any code that is intended to be deployed to production. These may be toy exercises, but we really would like to get an idea of how you build code on a day-to-day basis.
+You can find a live preview of the web-app below
 
-## How to submit?
-You can do this however you see fit - you can email us a tarball, a pointer to download your code from somewhere or just a link to a source control repository. Make sure your submission includes a small **README**, documenting any assumptions, simplifications and/or choices you made, as well as a short description of how to run the code and/or tests. Finally, to help us review your code, please split your commit history in sensible chunks (at least separate the initial provided code from your personal additions).
+[Demo](https://employee-analytics.netlify.app/)
 
-## The Interview:
-After you submit your code, we will contact you to discuss and potentially arrange an in-person interview with some of the team.
-The interview will cover a wide range of technical and social aspects relevant to working at Panalyt, but importantly for this exercise: we will also take the opportunity to step through your submitted code with you.
+## Getting Started
 
-## The Exercises:
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### 1. [Frontend] Build a SPA that displays employee data
-The complete specification for this exercise can be found in the [EmployeeData.md].
+### To Install
 
-## F.A.Q.
-1) _Is it OK to share your solutions publicly?_
-Yes, the questions are not prescriptive, the process and discussion around the code is the valuable part. You do the work, you own the code. Given we are asking you to give up your time, it is entirely reasonable for you to keep and use your solution as you see fit.
+1. Clone the git repository
 
-2) _Should I do X?_
-For any value of X, it is up to you, we intentionally leave the problem a little open-ended and will leave it up to you to provide us with what you see as important. Just remember to keep it simple. If it's a feature that is going to take you a couple of days, it's not essential.
+```bash
+git clone https://github.com/dandyling/employee-analytics
+```
 
-3) _Something is ambiguous, and I don't know what to do?_
-The first thing is: don't get stuck. We really don't want to trip you up intentionally, we are just attempting to see how you approach problems. That said, there are intentional ambiguities in the specifications, mainly to see how you fill in those gaps, and how you make design choices.
-If you really feel stuck, our first preference is for you to make a decision and document it with your submission - in this case there is really no wrong answer. If you feel it is not possible to do this, just send us an email and we will try to clarify or correct the question for you.
+2. Change to the `/frontend` directory and install the dependencies
 
-Good luck!
+```bash
+cd employee-analytics/frontend
+npm install
+# or
+yarn install
+```
 
-DISCLAIMER: This description was shamelessly copied from the Paidy Interview exercise as it was well written and the quality of the team that was built at Paidy reflected the effort put into the hiring process.
+3. To start to develop:
+
+```bash
+npm run start
+# or
+yarn run start
+```
+
+You will find the development server running on `localhost:3000`
+
+## Running the tests
+
+The application is broken down into the presentation layer and the business logic layer. The presentation layer is tested using react-testing-library and jest, and the business layer is tested using jest.
+
+To run the test:
+
+```bash
+npm run test
+# or
+yarn run test
+```
+
+### Viewing test coverage
+
+Test coverage is setup for this project. To view the test coverage, run the following
+
+```bash
+npm run test:cov
+# or
+yarn run test:cov
+```
+
+You will be able to see the coverage in `/coverage/index.html`
+
+## Deployment
+
+To build the output bundle, run the following command
+
+```bash
+npm run build
+# or
+yarn run build
+```
+
+You will find the output bundle in `/build` directory. You can deploy it just by dropping the whole folder in a provider such as netlify. You can find an example deployment [here](https://employee-analytics.netlify.app/)
+
+## Built With
+
+- [React Chartist](https://www.npmjs.com/package/react-chartist) - The React wrapper for the awesome [Chartist.js](http://gionkunz.github.io/chartist-js/) which allows the drawing of responsive charts with animations
+- [Tailwindcss](https://tailwindcss.com/) - for the CSS framework to build the presentation layer
+- [Recoil](https://recoiljs.org/) - for the state management framework
