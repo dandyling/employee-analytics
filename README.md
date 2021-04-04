@@ -6,7 +6,7 @@ The code is written to be as modular as possible to encourage code reuse. Thus, 
 
 1. Presentational layer
 
-   This layer is purely concerned with the generic components in the application, such as `<Badge>`, `<Card />` etc. These components are reuse throughout the application.
+   This layer is purely concerned with the generic components in the application, such as `<Badge>`, `<Card />` etc. These components are reuse throughout the application. They also use proper semantic tags for easier web-accesibility.
 
 2. Features
 
