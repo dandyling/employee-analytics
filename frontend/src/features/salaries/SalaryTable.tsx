@@ -26,27 +26,8 @@ export const SalaryTable = (props: Props) => {
   const { className = "" } = props;
   const salaries = useRecoilValue(salariesFilteredState);
 
-  const getLocationRows = (salaries: LocationSalaries) => {
-    const locationRows: LocationRow[] = mapLocationRows(salaries);
-    const total: LocationRow = calcTotalSalaries(locationRows);
-    const allRows = [...locationRows, total];
-    return allRows;
-  };
-
-  const mapTableRows = (rows: LocationRow[]) => {
-    const tableRows = rows.map((r) => {
-      const { location, current, previous } = r;
-      return {
-        Location: location,
-        Salary: getSalaryStr(current),
-        Delta: <DeltaChip previous={previous} current={current} />,
-      };
-    });
-    return tableRows;
-  };
-
   const getRows = () => {
-    const locationRows = getLocationRows(salaries);
+    const locationRows = getAllLocationRows(salaries);
     const rows: TableRow[] = mapTableRows(locationRows);
     return rows;
   };
@@ -66,7 +47,7 @@ export const SalaryTable = (props: Props) => {
   );
 };
 
-const mapLocationRows = (salaries: LocationSalaries): LocationRow[] => {
+export const mapLocationRows = (salaries: LocationSalaries): LocationRow[] => {
   const locations = Object.keys(salaries).map((l) => {
     const aggregate = salaries[l];
     const currentAverage = aggregate.current / aggregate.count;
@@ -81,7 +62,7 @@ const mapLocationRows = (salaries: LocationSalaries): LocationRow[] => {
   return locations;
 };
 
-const calcTotalSalaries = (locations: LocationRow[]): LocationRow => {
+export const calcTotalSalaries = (locations: LocationRow[]): LocationRow => {
   const total = locations.reduce(
     (total, row) => {
       total.current += row.current;
@@ -97,8 +78,28 @@ const calcTotalSalaries = (locations: LocationRow[]): LocationRow => {
   return total;
 };
 
-const getSalaryStr = (salary: number) => {
-  return `$${salary.toLocaleString("en-US", {
+export const getAllLocationRows = (salaries: LocationSalaries) => {
+  const locationRows: LocationRow[] = mapLocationRows(salaries);
+  const total: LocationRow = calcTotalSalaries(locationRows);
+  const allRows = [...locationRows, total];
+  return allRows;
+};
+
+export const mapTableRows = (rows: LocationRow[]) => {
+  const tableRows = rows.map((r) => {
+    const { location, current, previous } = r;
+    return {
+      Location: location,
+      Salary: getSalaryStr(current),
+      Delta: <DeltaChip previous={previous} current={current} />,
+    };
+  });
+  return tableRows;
+};
+
+export const getSalaryStr = (salary: number) => {
+  const prefix = salary >= 0 ? "$" : "-$";
+  return `${prefix}${Math.abs(salary).toLocaleString("en-US", {
     maximumFractionDigits: 0,
   })}`;
 };

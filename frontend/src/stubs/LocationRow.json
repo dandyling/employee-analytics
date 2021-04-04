@@ -1,0 +1,30 @@
+[{
+    "location": "China",
+    "current": 8516.873377976195,
+    "previous": 8446.234940476195
+    },
+    {
+    "location": "Japan",
+    "current": 8305.026060606062,
+    "previous": 8942.671060606059
+    },
+    {
+    "location": "Philippines",
+    "current": 8215.59226415095,
+    "previous": 8651.396666666666
+    },
+    {
+    "location": "Thailand",
+    "current": 8827.508833333333,
+    "previous": 8552.770166666669
+    },
+    {
+    "location": "Malaysia",
+    "current": 9950.576666666664,
+    "previous": 9080.97
+    },
+    {
+    "location": "Vietnam",
+    "current": 8289.484642857142,
+    "previous": 9146.363214285717
+}]

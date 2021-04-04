@@ -1,0 +1,32 @@
+{
+    "China": {
+      "current": 5723338.910000003,
+      "previous": 5675869.880000003,
+      "count": 672
+    },
+    "Japan": {
+      "current": 548131.7200000001,
+      "previous": 590216.2899999999,
+      "count": 66
+    },
+    "Philippines": {
+      "current": 1306279.170000001,
+      "previous": 1375572.0699999998,
+      "count": 159
+    },
+    "Thailand": {
+      "current": 529650.53,
+      "previous": 513166.21000000014,
+      "count": 60
+    },
+    "Malaysia": {
+      "current": 149258.64999999997,
+      "previous": 136214.55,
+      "count": 15
+    },
+    "Vietnam": {
+      "current": 232105.56999999998,
+      "previous": 256098.17000000007,
+      "count": 28
+    }
+  }

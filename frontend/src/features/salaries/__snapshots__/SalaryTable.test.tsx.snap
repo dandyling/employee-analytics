@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`map total table rows correctly 1`] = `
+Array [
+  Object {
+    "Delta": <DeltaChip
+      current={8516.873377976195}
+      previous={8446.234940476195}
+    />,
+    "Location": "China",
+    "Salary": "$8,517",
+  },
+  Object {
+    "Delta": <DeltaChip
+      current={8305.026060606062}
+      previous={8942.671060606059}
+    />,
+    "Location": "Japan",
+    "Salary": "$8,305",
+  },
+  Object {
+    "Delta": <DeltaChip
+      current={8215.59226415095}
+      previous={8651.396666666666}
+    />,
+    "Location": "Philippines",
+    "Salary": "$8,216",
+  },
+  Object {
+    "Delta": <DeltaChip
+      current={8827.508833333333}
+      previous={8552.770166666669}
+    />,
+    "Location": "Thailand",
+    "Salary": "$8,828",
+  },
+  Object {
+    "Delta": <DeltaChip
+      current={9950.576666666664}
+      previous={9080.97}
+    />,
+    "Location": "Malaysia",
+    "Salary": "$9,951",
+  },
+  Object {
+    "Delta": <DeltaChip
+      current={8289.484642857142}
+      previous={9146.363214285717}
+    />,
+    "Location": "Vietnam",
+    "Salary": "$8,289",
+  },
+  Object {
+    "Delta": <DeltaChip
+      current={52105.06184559034}
+      previous={52820.406048701305}
+    />,
+    "Location": "Total",
+    "Salary": "$52,105",
+  },
+]
+`;
+
+exports[`renders correctly 1`] = `<SalaryTable />`;
