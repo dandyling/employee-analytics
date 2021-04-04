@@ -20,7 +20,7 @@ The presentational layer is built using tailwindcss, as it is a CSS only framewo
 
 [LIVE DEMO](https://employee-analytics.netlify.app/)
 
-p.s. This app is also tested using jest and testing-libary. You can also view the test coverage setup in `/coverage/index.html`.
+p.s. This app is also tested using jest and testing-libary. You can also view the test coverage setup by running `npm run test:cov` and find the report in `/coverage/index.html`.
 
 ## Getting Started
 
@@ -55,8 +55,6 @@ You will find the development server running on `localhost:3000`
 
 ## Running the tests
 
-The application is broken down into the presentation layer and the business logic layer. The presentation layer is tested using testing-library and jest, and the business layer is tested using jest.
-
 To run the test:
 
 ```bash
@@ -87,10 +85,14 @@ npm run build
 yarn run build
 ```
 
-You will find the output bundle in `/build` directory. You can deploy it just by dropping the whole folder in a provider such as netlify.
+You will find the output bundle in `/build` directory. You can deploy it just by uploading the whole folder to a provider such as netlify.
 
 ## Built With
 
 - [React Chartist](https://www.npmjs.com/package/react-chartist) - The React wrapper for the awesome [Chartist.js](http://gionkunz.github.io/chartist-js/) which allows the drawing of responsive charts with animations
 - [Tailwindcss](https://tailwindcss.com/) - for the CSS framework to build the presentation layer
 - [Recoil](https://recoiljs.org/) - for the state management framework
+
+## Authors
+
+- [Dandy Ling](https://github.com/dandyling/) - initial work
