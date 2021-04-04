@@ -15,12 +15,12 @@ export const EmployeeSalaryData = () => {
         {
           tabName: "Chart",
           tabIcon: faChartBar,
-          tabContent: <SalaryChart />,
+          tabContent: <SalaryChart className="h-full" />,
         },
         {
           tabName: "Data",
           tabIcon: faUser,
-          tabContent: <SalaryTable />,
+          tabContent: <SalaryTable className="h-full" />,
         },
       ]}
       className="h-full"

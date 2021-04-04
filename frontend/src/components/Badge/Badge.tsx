@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const Badge = (props: Props) => {
-  const { children, className, variant = "warning" } = props;
+  const { children, className = "", variant = "warning" } = props;
 
   const color = getVariantColor(variant);
 

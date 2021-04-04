@@ -15,7 +15,7 @@ interface TabsCardProps {
 }
 
 export const TabsCard = (props: TabsCardProps) => {
-  const { title, tabs, className } = props;
+  const { title, tabs, className = "" } = props;
   const [index, setIndex] = useState(0);
   const { tabContent } = tabs[index];
 
@@ -29,7 +29,7 @@ export const TabsCard = (props: TabsCardProps) => {
         {title && <h3 className="mr-4">{title}</h3>}
         <TabBar tabs={tabs} selected={index} onChange={handleChange} />
       </CardHeader>
-      <CardBody className="h-full">{tabContent}</CardBody>
+      <CardBody>{tabContent}</CardBody>
     </Card>
   );
 };

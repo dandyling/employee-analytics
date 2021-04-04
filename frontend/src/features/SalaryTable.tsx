@@ -18,7 +18,12 @@ interface TableRow {
   Delta: ReactNode;
 }
 
-export const SalaryTable = () => {
+interface Props {
+  className?: string;
+}
+
+export const SalaryTable = (props: Props) => {
+  const { className = "" } = props;
   const salaries = useRecoilValue(salariesFilteredState);
 
   const getLocationRows = () => {
@@ -39,12 +44,13 @@ export const SalaryTable = () => {
   });
 
   return (
-    <div className="flex-col">
+    <div className={`flex flex-col ${className}`}>
       <Filter />
       <Table
         columns={["Location", "Salary", "Delta"]}
         rows={tableRows}
         variant="highlight-last"
+        className="flex-1 bg-gray-50"
       />
     </div>
   );
