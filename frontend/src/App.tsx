@@ -1,6 +1,6 @@
 import React from "react";
 import { RecoilRoot } from "recoil";
-import { Layout } from "./components/layout/Layout";
+import { Layout } from "./common/layout/Layout";
 import { EmployeeSalaryData } from "./features/EmployeeSalaryData";
 
 function App() {
