@@ -1,12 +1,12 @@
 # Employee Salary Analytics
 
-This is a web-app that calculates the average salary of employees by location. The sample data in the application can be found from `EmployeeData.md`.
+This is a web-app that calculates the average salary of employees by location. The sample data in the application can be found in `/EmployeeDataset.json`.
 
 The code is written to be as modular as possible to encourage code reuse. Thus, you can refer to the following for easier navigation of the folder structures.
 
 1. Presentational layer
 
-   This layer is purely concerned with the generic components in the application, such as `<Badge>`, `<Card />` etc. These components are reuse throughout the application. They also use proper semantic tags for easier web-accesibility.
+   This layer is purely concerned with the generic components in the application, such as `<Badge>`, `<Card />` etc. These components are reuse throughout the application, so they do not contain any business logic. They also use proper semantic tags for easier web-accesibility.
 
 2. Features
 
@@ -16,11 +16,11 @@ The code is written to be as modular as possible to encourage code reuse. Thus, 
 
    These are business logic calculations, such as the salary calculations etc
 
-The presentational layer is built using tailwindcss, as it is a CSS only framework, and doesn't add javascript overhead for some CSS-in-JS framework such as ChakraUI. The website is also fully responsive using CSS only. Do checkout the mobile view using the demo below
+The presentational layer is built using tailwindcss, as it is a CSS only framework, and doesn't add javascript overhead for some CSS-in-JS framework such as ChakraUI. **The website is also fully responsive using CSS only**. Do checkout the mobile view using the demo below
 
 [LIVE DEMO](https://employee-analytics.netlify.app/)
 
-p.s. This app is also tested using jest and testing-libary. You can also view the test coverage setup by running `npm run test:cov` and find the report in `/coverage/index.html`.
+p.s. This app is also tested using jest and testing-libary. You can also view the test coverage setup by running `npm run test:cov` and see the report in `/coverage/index.html`.
 
 ## Getting Started
 
@@ -43,7 +43,7 @@ npm install
 yarn install
 ```
 
-3. To start to develop:
+3. To start the development:
 
 ```bash
 npm run start
@@ -95,4 +95,5 @@ You will find the output bundle in `/build` directory. You can deploy it just by
 
 ## Authors
 
+- Panalyt - For the initial idea
 - [Dandy Ling](https://github.com/dandyling/) - initial work
