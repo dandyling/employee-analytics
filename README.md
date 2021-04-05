@@ -6,15 +6,27 @@ The code is written to be as modular as possible to encourage code reuse. Thus, 
 
 1. Presentational layer
 
-   This layer is purely concerned with the generic components in the application, such as `<Badge>`, `<Card />` etc. These components are reuse throughout the application, so they do not contain any business logic. They also use proper semantic tags for easier web-accesibility.
+```bash
+/components
+```
+
+This layer is purely concerned with the generic components in the application, such as `<Badge>`, `<Card />` etc. These components are reuse throughout the application, so they do not contain any business logic. They also use proper semantic tags for easier web-accesibility.
 
 2. Features
 
-   The app is separated into business domain called features. Here you can find the React components that are specific to certain business feature. For example, you can find the salary features under `/features/salaries` directory. Thus, this is more scalable in the future if you decided to add more features
+```bash
+/features
+```
+
+The app is separated into business domain called features. Here you can find the React components that are specific to certain business feature. For example, you can find the salary features under `/features/salaries` directory. Thus, this is more scalable in the future if you decided to add more features
 
 3. Business logic
 
-   These are business logic calculations, such as the salary calculations etc
+```bash
+/data
+```
+
+These are business logic calculations, such as the salary calculations etc
 
 The presentational layer is built using tailwindcss, as it is a CSS only framework, and doesn't add javascript overhead for some CSS-in-JS framework such as ChakraUI. **The website is also fully responsive using CSS only**. Do checkout the mobile view using the demo below
 
