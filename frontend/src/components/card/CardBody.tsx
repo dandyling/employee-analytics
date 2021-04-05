@@ -9,7 +9,7 @@ export const CardBody = (props: Props) => {
   const { children, className = "" } = props;
   return (
     <div
-      className={`lg:p-4 flex-1 flex flex-col overflow-hidden overflow-y-scroll ${className}`}
+      className={`lg:p-4 flex-1 flex flex-col overflow-hidden overflow-y-auto ${className}`}
     >
       {children}
     </div>
