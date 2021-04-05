@@ -32,7 +32,7 @@ export const TabBar = (props: Props) => {
             >
               {t.tabIcon && (
                 <div className="pr-2 text-lg">
-                  <FontAwesomeIcon icon={t.tabIcon} onClick={console.log} />
+                  <FontAwesomeIcon icon={t.tabIcon} />
                 </div>
               )}
               <div className="text-sm uppercase">{t.tabName}</div>
