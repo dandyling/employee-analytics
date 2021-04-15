@@ -1,6 +1,6 @@
 # Employee Salary Analytics
 
-This is a web-app that calculates the average salary of employees by location. The sample data in the application can be found in `/EmployeeDataset.json`.
+This is a web-app template that calculates the average salary of employees by location. The sample data in the application can be found in `/EmployeeDataset.json`.
 
 The code is written to be as modular as possible to encourage code reuse. Thus, you can refer to the following for easier navigation of the folder structures.
 
